@@ -1,4 +1,4 @@
 french-restaurant
 =================
 
-A demo for French Restaurants
+A work-in-progress demo for French Restaurants
