@@ -1,0 +1,9 @@
+<ion-view title="Restaurants">
+	<ion-content>
+		<ion-list>
+			<ion-item ng-repeat="restaurant in restaurants" type="item-text-wrap" href="#/tab/restaurant/{{restaurant._id}}">
+				{{restaurant.name}}
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>
