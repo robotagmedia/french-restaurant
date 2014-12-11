@@ -1,0 +1,109 @@
+<ion-view title="">
+	<ion-nav-buttons side="left">
+		<a href="/#/fr/l1"><img class="title-image" src="img/logo.gif" /></a>
+	</ion-nav-buttons>
+  <ion-nav-buttons side="right">
+  	<button class="button button-icon icon ion-heart"><div class="button-label">お気に入り</div></button>
+  	<button class="button button-icon icon ion-android-cart"><div class="button-label">カート</div></button>
+  	<button class="button button-icon icon ion-search"><div class="button-label">商品検索</div></button>
+    <button menu-toggle="right" class="button button-icon icon ion-navicon-round"><div class="button-label">メニュー</div></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+  	
+  	<div class="bar-brand">
+  		<p><small>驚異の軽さと暖かさを両立したウルトラライトダウン。羽毛をダウンパックに入れずに直接詰められる生地を使うことで、構造を簡略化し、... <a href>続きを読む</a></small></p>
+  	</div>
+  	
+  	<div class="detail">
+  		<div class="name">{{item.name}}</div>
+  	</div>
+  	<div class="detail">
+  		<div class="price">¥{{item.price}}<small>+消費税</small></div>
+  	</div>
+  	<div class="row">
+			<div class="col color">
+				カラー: 39 DARK BROWN
+			</div>
+  		<div class="col-33 padding-right">
+  			<div class="rating">
+					<i class="icon ion-ios-star"></i>
+					<i class="icon ion-ios-star"></i>
+					<i class="icon ion-ios-star"></i>
+					<i class="icon ion-ios-star"></i>
+					<i class="icon ion-ios-star"></i>
+					<div class="meter" style="width:{{item.rating}}%;"></div>
+				</div>
+  		</div>
+  	</div>
+  	<div class="padding">
+			
+			<ion-slide-box on-slide-changed="slideHasChanged($index)" does-continue="true" auto-play="true" show-pager="false">
+				<ion-slide><img class="slide" src="img/i1.jpg"></ion-slide>
+				<ion-slide><img class="slide" src="img/i2.jpg"></ion-slide>
+				<ion-slide><img class="slide" src="img/i3.jpg"></ion-slide>
+				<ion-slide><img class="slide" src="img/i4.jpg"></ion-slide>
+				<ion-slide><img class="slide" src="img/i5.jpg"></ion-slide>
+				<ion-slide><img class="slide" src="img/i6.jpg"></ion-slide>
+				<ion-slide><img class="slide" src="img/i7.jpg"></ion-slide>
+				<ion-slide><img class="slide" src="img/i8.jpg"></ion-slide>
+			</ion-slide-box>
+			
+		</div>
+		
+		<div class="list">
+			<div class="item">
+				<h3>サイズ:</h3>
+				<ul class="sizes"><li>S</li><li>M</li><li>L</li><li>XL</li></ul>
+			</div>
+			<div class="item">
+				<h3>数量:</h3>
+				<ul class="number"><li>1</li><li class="light"><i class="icon ion-plus"></i></li><li class="light"><i class="icon ion-minus"></i></li></ul>
+			</div>
+			<div class="item">
+				<div class="row">
+					<div class="col"><a class="cart-button">カートに追加</a></div>
+					<div class="col col-20">
+						<a class="fav-button">
+							<i class="icon ion-heart"></i>
+							<p>お気に入り</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="item item-icon-right">
+				この商品について
+				<i class="icon ion-plus tame"></i>
+			</div>
+			<div class="item item-icon-right">
+				<div class="row stripped">
+					<div class="col stripped">お客様のコメント</div>
+					<div class="col col-33 stripped">
+						<div class="rating sp">
+							<i class="icon ion-ios-star"></i>
+							<i class="icon ion-ios-star"></i>
+							<i class="icon ion-ios-star"></i>
+							<i class="icon ion-ios-star"></i>
+							<i class="icon ion-ios-star"></i>
+							<div class="meter" style="width:{{item.rating}}%;"></div>
+						</div>
+					</div>
+				</div>
+				<i class="icon ion-plus tame"></i>
+			</div>
+			<div class="item">サイズ表を見る</div>
+			<div class="item">はじめてのお客様へ</div>
+			<div class="item">返品・返金・交換について</div>
+			<div class="item">
+				<ul class="share">
+					<li>シェア</li>
+					<li class="social" style="background-color:#3b5998;"><i class="icon ion-social-facebook"></i></li>
+					<li class="social" style="background-color:#00aced;"><i class="icon ion-social-twitter"></i></li>
+					<li class="social" style="background-color:#dd4b39;"><i class="icon ion-social-googleplus"></i></li>
+					<li class="social" style="background-color:#cb2027;"><i class="icon ion-social-pinterest"></i></li>
+					<li class="social" style="background-color:#bb0000;"><i class="icon ion-social-youtube"></i></li>
+				</ul>
+			</div>
+		</div>
+  	
+  </ion-content>
+</ion-view>

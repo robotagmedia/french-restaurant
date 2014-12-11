@@ -6,8 +6,8 @@ var app = angular.module('fr-demo', ['ngRoute']);
 app.config(function($routeProvider, $locationProvider) {
 	$routeProvider.when('/', { templateUrl: 'views/home/view.html', controller: 'home' });
 	
-	$routeProvider.when('/restaurants', { templateUrl: 'views/restaurants/view.html', controller: 'restaurants' });
-	$routeProvider.when('/restaurants/:id', { templateUrl: 'views/restaurant/view.html', controller: 'restaurant' });
+	$routeProvider.when('/items', { templateUrl: 'views/items/view.html', controller: 'items' });
+	$routeProvider.when('/items/:id', { templateUrl: 'views/item/view.html', controller: 'item' });
 	
 	$routeProvider.otherwise({ redirectTo: '/' });
 	$locationProvider.html5Mode(true);

@@ -1,0 +1,74 @@
+<ion-view title="">
+	<ion-nav-buttons side="left">
+		<a href="/#/fr/l1"><img class="title-image" src="img/logo.gif" /></a>
+	</ion-nav-buttons>
+  <ion-nav-buttons side="right">
+  	<button class="button button-icon icon ion-heart"><div class="button-label">お気に入り</div></button>
+  	<button class="button button-icon icon ion-android-cart"><div class="button-label">カート</div></button>
+  	<button class="button button-icon icon ion-search"><div class="button-label">商品検索</div></button>
+    <button menu-toggle="right" class="button button-icon icon ion-navicon-round"><div class="button-label">メニュー</div></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+  	
+  	<ion-slide-box on-slide-changed="slideHasChanged($index)" does-continue="true" auto-play="true" show-pager="false">
+  		<ion-slide><img class="slide" src="img/slide1.jpg"></ion-slide>
+  		<ion-slide><img class="slide" src="img/slide2.jpg"></ion-slide>
+  		<ion-slide><img class="slide" src="img/slide3.jpg"></ion-slide>
+  		<ion-slide><img class="slide" src="img/slide4.jpg"></ion-slide>
+  		<ion-slide><img class="slide" src="img/slide5.jpg"></ion-slide>
+  		<ion-slide><img class="slide" src="img/slide6.jpg"></ion-slide>
+  		<ion-slide><img class="slide" src="img/slide7.jpg"></ion-slide>
+  		<ion-slide><img class="slide" src="img/slide8.jpg"></ion-slide>
+  	</ion-slide-box>
+  	
+  	<ul class="horizontal">
+  		<li><a href="/#/fr/l2" class="red">Women</a></li>
+  		<li><a href="" class="blue">Men</a></li>
+  		<li><a href="" class="cyan">Kids</a></li>
+  		<li><a href="" class="green">Baby</a></li>
+  	</ul>
+  	
+  	<section>
+			<ul class="horizontal">
+				<li>
+					<div class="list">
+						<a class="item item-icon-right tame" href="#">今週の新作 <i class="icon ion-chevron-right"></i></a>
+						<a class="item item-icon-right tame" href="#">まとめ買い <i class="icon ion-chevron-right"></i></a>
+						<a class="item item-icon-right tame" href="#">値下げ商品 <i class="icon ion-chevron-right"></i></a>
+					</div>
+				</li>
+				<li>
+					<div class="list">
+						<a class="item item-icon-right tame" href="#">期間限定商品 <i class="icon ion-chevron-right"></i></a>
+						<a class="item item-icon-right tame" href="#">モバイル限定 <i class="icon ion-chevron-right"></i></a>
+						<a class="item item-icon-right tame" href="#">デジタルチラシ <i class="icon ion-chevron-right"></i></a>
+					</div>
+				</li>
+			</ul>
+  	</section>
+  	
+  	<section>
+			<ul class="list">
+				<li class="item item-icon-left item-icon-right">
+					<i class="icon ion-tshirt-outline brand"></i>
+					<h2>大きいサイズ</h2>
+					<p class="sub">お客様の声にお応えして、サイズの種類が増えました</p>
+					<i class="icon ion-chevron-right tame"></i>
+				</li>
+				<li class="item item-icon-left item-icon-right">
+					<i class="icon ion-monitor brand"></i>
+					<h2>大型店特別商品</h2>
+					<p class="sub">大型店だけの商品がオンラインストアで購入できる</p>
+					<i class="icon ion-chevron-right tame"></i>
+				</li>
+				<li class="item item-icon-left item-icon-right">
+					<i class="icon ion-ios-photos-outline brand"></i>
+					<h2>スタイルディクショナリ</h2>
+					<p class="sub">ユニクロの最新スタイリングから選べる</p>
+					<i class="icon ion-chevron-right tame"></i>
+				</li>
+			</ul>
+  	</section>
+  	
+  </ion-content>
+</ion-view>

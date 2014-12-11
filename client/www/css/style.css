@@ -1,1 +1,296 @@
-/* Empty. Add your own CSS if you like */
+body {
+	background-color: #e6e6e6;
+}
+
+section {
+	padding-bottom: 32px;
+	background-color: #e6e6e6;
+}
+
+.button-label {
+	font-size: 10px;
+	line-height: normal;
+}
+
+.bar-header {
+	height: 60px;
+}
+
+.has-header {
+	top: 60px;
+}
+
+.slide {
+	max-width: 100%;
+}
+
+.red {
+	background-color: red;
+}
+
+.blue {
+	background-color: #000082;
+}
+
+.cyan {
+	background-color: #50b4f0;
+}
+
+.green {
+	background-color: #96c800;
+}
+
+ul.horizontal {
+	display: flex;
+}
+
+ul.horizontal li {
+	flex: 1;
+	text-align: center;
+}
+
+ul.horizontal li > a {
+	padding: 30px 0px;
+	text-align: center;
+	font-weight: bold;
+	display: block;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+a.uni {
+	font-weight: bold;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: 0px;
+	margin: 0px;
+}
+
+.copyright {
+	font-size: 9px;
+	text-transform: uppercase;
+}
+
+.list .item.tame {
+	color: #636262;
+	padding: 10px;
+	font-size: 14px;
+}
+
+.stripped {
+	padding: 0px;
+}
+
+.dull {
+	border-width: 0px;
+}
+
+.category h4 {
+	margin: 0px;
+	padding: 15px 0px;
+}
+
+.bar-brand {
+	background-color: red;
+	padding: 15px 10px;
+}
+
+.bar-brand h3, .bar-brand p {
+	color: #fff;
+	margin: 0px;
+}
+
+.bar-brand a {
+	color: #fff;
+}
+
+ul.social li {
+	color: #fff;
+	padding: 10px 0px;
+	font-size: 25px;
+}
+
+.bar-light .button {
+	color: #a4a4a4;
+}
+
+i.tame {
+	color: #636262;
+	font-size: 14px !important;
+}
+
+i.brand {
+	color: red;
+	font-size: 40px;
+}
+
+p.sub {
+	font-size: 10px;
+	margin: 0px;
+}
+
+.list .item.tame i {
+	font-size: 12px;
+}
+
+.sorter {
+	background-color: red;
+	color: #fff;
+	padding: 0px;
+}
+
+.sorter i {
+	font-size: 20px;
+}
+
+.sorter .col {
+	padding: 10px 5px;
+}
+
+.sorter .btn {
+	border-left: 1px solid #fff;
+}
+
+.item .name {
+	white-space: normal;
+	font-size: 13px;
+}
+
+.item .fav {
+	color: #a4a4a4;
+}
+
+.item .price {
+	font-size: 40px;
+	line-height: normal;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.rating {
+	background-color: black;
+	display: flex;
+	position: relative;
+}
+
+.rating.sp {
+	height: 20px;
+}
+
+.margin-top {
+	margin-top: 10px;
+}
+
+.rating .meter {
+	height: 100%;
+	background-color: red;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.rating i {
+	flex: 1;
+	text-align: center;
+	color: #fff;
+	border-left: 1px solid #fff;
+	padding: 1px 0px;
+	z-index: 1;
+	position: static !important;
+	font-size: 14px !important;
+}
+
+.detail {
+	padding: 10px 10px 0px;
+}
+
+.detail .name {
+	font-size: 15px;
+}
+
+.detail .price {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.detail .price small {
+	font-size: 15px;
+}
+
+.color {
+	font-size: 12px;
+}
+
+.sizes li {
+	background-color: black;
+	color: #fff;
+	display: inline-block;
+	width: 40px;
+	text-align: center;
+	padding: 10px 0px;
+	margin-right: 5px;
+}
+
+.number li {
+	border: 1px solid #ccc;
+	display: inline-block;
+	width: 40px;
+	text-align: center;
+	padding: 10px 0px;
+	margin-right: 5px;
+}
+
+.number li.light {
+	border-color: #e6e6e6;
+	color: #e6e6e6;
+}
+
+.cart-button {
+	display: block;
+	background-color: #bebebe;
+	color: #fff;
+	padding: 20px 0px;
+	margin: 0px;
+	text-align: center;
+	font-size: 20px;
+}
+
+.fav-button {
+	border: 2px solid #bebebe;
+	color: #bebebe;
+	display: block;
+	height: 60px;
+	margin: 0px;
+	text-align: center;
+	position: relative;
+}
+
+.fav-button i {
+	font-size: 30px;
+	position: absolute;
+	top: 10px;
+	left: 0px;
+	width: 100%;
+}
+
+.fav-button p {
+	margin: 0px;
+	font-size: 9px;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+
+.share li {
+	display: inline-block;
+	margin-right: 5px;
+	padding: 5px 0px;
+}
+
+.share li.social {
+	text-align: center;
+	min-width: 30px;
+	color: #fff;
+}
