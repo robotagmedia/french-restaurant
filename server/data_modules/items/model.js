@@ -4,7 +4,8 @@ var schema = mongoose.Schema({
 	name: { type: String },
 	img: { type: String },
 	price: { type: String },
-	rating: { type: String }
+	rating: { type: String },
+	html: { type: String }
 });
 
 //schema stuff
