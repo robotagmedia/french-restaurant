@@ -1,0 +1,39 @@
+<ion-view>
+  <ion-content class="has-header">
+  	
+  	<img class="slide" src="{{collection.splash}}">
+  	
+  	<div class="list">
+  		<div class="item dull">
+  			<h4>{{store | uppercase}} / {{store | uppercase}} {{collection.jp}}</h4>
+  			<h2>{{collection.jp}}{{collection.items.length}}件</h2>
+  		</div>
+  		<div class="item stripped dull">
+  			<div class="row sorter {{store}}">
+  					<div class="col col-67"><strong>並び替え:</strong> おすすめ順</div>
+  					<div class="col text-center"><i class="icon ion-chevron-down"></i></div>
+  					<div class="col text-center btn"><i class="icon ion-ios-list"></i></div>
+  					<div class="col text-center btn"><i class="icon ion-android-checkbox-blank"></i></div>
+  			</div>
+  		</div>
+  		<a ng-repeat="item in collection.items" href="/#/store/goods/{{store}}/{{collection.name}}/{{item._id}}" class="row item">
+  			<div class="col"><img class="slide" src="{{item.thumb}}"/></div>
+  			<div class="col">
+  				<div class="name">{{item.name}}</div>
+  				<div class="price">¥{{item.price}}</div>
+  				<div class="rating margin-top">
+  					<i class="icon ion-ios-star"></i>
+  					<i class="icon ion-ios-star"></i>
+  					<i class="icon ion-ios-star"></i>
+  					<i class="icon ion-ios-star"></i>
+  					<i class="icon ion-ios-star"></i>
+  					<div class="meter" style="width:{{item.rating}}%;"></div>
+  				</div>
+  			</div>
+  			<div class="col-10"><h1 class="text-center fav"><i class="icon ion-heart"></i></h1></div>
+  		</a>
+  	</div>
+  	
+  	<div ng-include="'templates/menu.html'"></div>
+  </ion-content>
+</ion-view>

@@ -7,6 +7,10 @@ section {
 	background-color: #e6e6e6;
 }
 
+.bar .title {
+	height: 0px;
+}
+
 .button-label {
 	font-size: 10px;
 	line-height: normal;
@@ -24,19 +28,19 @@ section {
 	max-width: 100%;
 }
 
-.red {
+.women {
 	background-color: red;
 }
 
-.blue {
+.men {
 	background-color: #000082;
 }
 
-.cyan {
+.kids {
 	background-color: #50b4f0;
 }
 
-.green {
+.baby {
 	background-color: #96c800;
 }
 
@@ -45,7 +49,7 @@ ul.horizontal {
 	display: flex;
 }
 
-ul.horizontal li {
+ul.horizontal > li {
 	-webkit-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
@@ -96,13 +100,13 @@ a.uni {
 }
 
 .bar-brand {
-	background-color: red;
 	padding: 15px 10px;
 }
 
 .bar-brand h3, .bar-brand p {
 	color: #fff;
 	margin: 0px;
+	text-transform: uppercase;
 }
 
 .bar-brand a {
@@ -117,6 +121,10 @@ ul.social li {
 
 .bar-light .button {
 	color: #a4a4a4;
+}
+
+.bar-light .buttons .ion-close-round::before {
+	color: red;
 }
 
 i.tame {
@@ -134,12 +142,15 @@ p.sub {
 	margin: 0px;
 }
 
+.list .item {
+	text-align: left;
+}
+
 .list .item.tame i {
 	font-size: 12px;
 }
 
 .sorter {
-	background-color: red;
 	color: #fff;
 	padding: 0px;
 }
@@ -299,4 +310,25 @@ p.sub {
 	text-align: center;
 	min-width: 30px;
 	color: #fff;
+}
+
+.slider {
+	padding-bottom: 30px;
+}
+
+.slider-pager {
+	bottom: 15px;
+}
+
+.slider-pager .slider-pager-page {
+	opacity: 1;
+}
+
+.slider-pager-page i {
+	color: #bebebe;
+	font-size: 10px;
+}
+
+.slider-pager-page.active i {
+	color: red;
 }

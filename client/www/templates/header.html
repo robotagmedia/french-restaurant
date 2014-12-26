@@ -1,0 +1,12 @@
+<ion-header-bar class="bar-light">
+	<div class="buttons">
+		<a href ng-click="home()"><img class="title-image" src="img/logo.gif" /></a>
+	</div>
+	<h1 class="title"></h1>
+	<div class="buttons">
+		<button class="button button-icon icon ion-heart"><div class="button-label">お気に入り</div></button>
+		<button class="button button-icon icon ion-android-cart"><div class="button-label">カート</div></button>
+		<button class="button button-icon icon ion-search"><div class="button-label">商品検索</div></button>
+		<button class="button button-icon icon" ng-class="{'ion-navicon-round': !toggled, 'ion-close-round': toggled}" ng-click="toggleMenu()"><div class="button-label">メニュー</div></button>
+	</div>
+</ion-header-bar>

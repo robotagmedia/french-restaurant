@@ -22,51 +22,63 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-
+      
+    .state('menu', {
+    	templateUrl: 'templates/nav.html'
+    })
+    
+    .state('home', {
+    	url: '/',
+    	templateUrl: 'templates/home.html'
+    })
+    
+    .state('store', {
+    	url: '/store/:categoryName',
+    	templateUrl: 'templates/store.html',
+    	controller: 'categories'
+    })
+    
+    .state('collection', {
+    	url: '/store/:categoryName/:collectionName/:collectionId',
+    	templateUrl: 'templates/collections.html',
+    	controller: 'collections'
+    })
+    
+    .state('item', {
+    	url: '/store/goods/:categoryName/:collectionName/:itemId',
+    	templateUrl: 'templates/items.html',
+    	controller: 'items'
+    })
+    
+     /*
     .state('app', {
-      url: "/fr",
+      //url: "/fr",
       abstract: true,
-      templateUrl: "templates/menu.html",
+      templateUrl: "templates/nav.html",
       controller: 'AppCtrl'
     })
-
-    .state('app.l1', {
-      url: "/l1",
+    */
+		/*
+    .state('app.home', {
+      url: "/",
       views: {
         'menuContent': {
-          templateUrl: "templates/l1.html"
+          templateUrl: "templates/home.html"
         }
       }
     })
-    
-    .state('app.l2', {
-    	url: '/l2',
-    	views: {
-    		'menuContent': {
-    			templateUrl: 'templates/l2.html'
-    		}
-    	}
-    })
-    
-    .state('app.l3', {
-    	url: '/l3',
-    	views: {
-    		'menuContent': {
-    			templateUrl: 'templates/l3.html',
-    			controller: 'collections'
-    		}
-    	}
-    })
-    
+    */
+    /*
     .state('app.l4', {
-    	url: '/l4/:itemId',
+    	url: '/items/:itemId',
     	views: {
     		'menuContent': {
-    			templateUrl: 'templates/l4.html',
+    			templateUrl: 'templates/items.html',
     			controller: 'items'
     		}
     	}
     })
-  $urlRouterProvider.otherwise('/fr/l1');
+    */
+  //$urlRouterProvider.otherwise('/');
 });
 

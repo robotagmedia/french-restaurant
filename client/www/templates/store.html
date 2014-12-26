@@ -1,0 +1,68 @@
+<ion-view>
+  <ion-content class="has-header">
+  	
+  	<div class="bar-brand {{category.name}}"><h3>{{category.name}}</h3></div>
+  	
+  	<ion-slide-box ng-if="category" does-continue="true">
+  		<ion-slide ng-repeat="slide in category.slides"><img class="slide" src="{{slide}}"></ion-slide>
+  	</ion-slide-box>
+  	
+  	<section>
+			<ul class="horizontal">
+				<li>
+					<div class="list">
+						<a class="item item-icon-right tame" href="#">今週の新作 <i class="icon ion-chevron-right"></i></a>
+						<a class="item item-icon-right tame" href="#">まとめ買い <i class="icon ion-chevron-right"></i></a>
+					</div>
+				</li>
+				<li>
+					<div class="list">
+						<a class="item item-icon-right tame" href="#">期間限定商品 <i class="icon ion-chevron-right"></i></a>
+						<a class="item item-icon-right tame" href="#">値下げ商品 <i class="icon ion-chevron-right"></i></a>
+					</div>
+				</li>
+			</ul>
+  	</section>
+  	
+  	<section ng-repeat="collection in category.collections">
+			<div class="list">
+				<div class="item dull">
+					<h3>{{category.name | uppercase}} {{collection.jp}}</h3>
+				</div>
+				<div class="item dull stripped">
+					<ul class="list horizontal category">
+						<li ng-repeat="collection in collection.collections">
+							<a href="/#/store/{{category.name}}/{{collection.name}}/{{collection._id}}" style="padding:0px;">
+								<img class="slide" src="{{collection.thumb}}">
+								<h4>{{collection.jp}}</h4>
+							</a>
+						</li>
+						<!--
+						<li><a href="/#/fr/l3" style="padding:0px;"><img class="slide" src="img/outer1.jpg"><h4>アウター</h4></a></li>
+						<li><img class="slide" src="img/outer2.jpg"><h4>ジャケット</h4></li>
+						<li><img class="slide" src="img/outer3.jpg"><h4>フリース</h4></li>
+						-->
+					</ul>
+				</div>
+			</div>
+  	</section>
+  	
+  	<!--
+  	<section>
+			<div class="list">
+				<div class="item dull">
+					<h3>WOMEN トップス</h3>
+				</div>
+				<div class="item dull stripped">
+					<ul class="list horizontal category">
+						<li><img class="slide" src="img/tops1.jpg"><h4>セーター</h4></li>
+						<li><img class="slide" src="img/tops2.jpg"><h4>スウェットシャツ</h4></li>
+						<li><img class="slide" src="img/tops3.jpg"><h4>ブラウス</h4></li>
+					</ul>
+				</div>
+			</div>
+  	</section>
+  	-->
+  	<div ng-include="'templates/menu.html'"></div>
+  </ion-content>
+</ion-view>

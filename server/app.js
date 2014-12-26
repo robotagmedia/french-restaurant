@@ -15,6 +15,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var router = require('./router');
+//require('./seed');
 
 var app = express();
 

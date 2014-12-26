@@ -25,7 +25,8 @@
   </head>
 
   <body ng-app="starter">
-    <ion-nav-view></ion-nav-view>
+    <div ng-controller="header" ng-include="'templates/header.html'"></div>
+    <ion-nav-view animation="none"></ion-nav-view>
   </body>
   
   
