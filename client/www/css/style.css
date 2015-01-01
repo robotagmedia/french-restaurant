@@ -332,3 +332,22 @@ p.sub {
 .slider-pager-page.active i {
 	color: red;
 }
+
+.tabs-inline {
+	position: static;
+	background-color: #fff;
+}
+
+.tabs-inline .tab-item {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #bebebe;
+}
+
+.tabs-inline .tab-item.active {
+	color: #2f2e2e;
+}
+
+.slider-narrow {
+	margin: 0px 50px;
+}

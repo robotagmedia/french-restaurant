@@ -63,6 +63,15 @@
 			</ul>
   	</section>
   	
+  	
+  		<div class="tabs tabs-inline">
+  			<a ng-repeat="tab in tabs" class="tab-item" ng-class="{ active: currentTab.name === tab.name }" ng-click="goToTab({{$index}})">{{tab.name}}</a>
+  		</div>
+  		
+  		<ion-slide-box ng-repeat="tab in tabs" ng-if="currentTab.name === tab.name" on-slide-changed="goToSlide($index, tab)">
+				<ion-slide ng-repeat="slide in tab.slides"><img class="slide" src="{{slide.src}}"></ion-slide>
+			</ion-slide-box>
+  	
   	<div ng-include="'templates/menu.html'"></div>
   </ion-content>
 </ion-view>

@@ -29,7 +29,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     
     .state('home', {
     	url: '/',
-    	templateUrl: 'templates/home.html'
+    	templateUrl: 'templates/home.html',
+    	controller: 'home'
     })
     
     .state('store', {

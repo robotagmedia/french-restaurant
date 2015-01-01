@@ -31,6 +31,24 @@ angular.module('starter.controllers', [])
  	
 })
 
+.controller('home', function($scope) {
+	
+	$scope.tabs = [
+		{ name: 'women', slides: [{ name: '1.jpg' }, { name: '2.jpg' }, { name: '3.jpg' }, { name: '4.jpg' }]},
+		{ name: 'men', slides: [{ name: '1.jpg' }, { name: '2.jpg' }, { name: '3.jpg' }, { name: '4.jpg' }]},
+		{ name: 'kids', slides: [{ name: '1.jpg' }, { name: '2.jpg' }, { name: '3.jpg' }, { name: '4.jpg' }]}
+	];
+	$scope.goToTab = function(tab) {
+		$scope.currentTab = $scope.tabs[tab];
+		$scope.goToSlide(0, $scope.currentTab);
+	}
+	$scope.goToSlide = function(index, tab) {
+		tab.slides[index].src = 'img/home/tabs/'+tab.name+'/'+tab.slides[index].name;
+	}
+	$scope.goToTab(0);
+	
+})
+
 .controller('categories', function($scope, $stateParams, $http) {
 	
 	$http.get('http://localhost:3001/categories/'+$stateParams.categoryName).success(function(results) {
