@@ -64,13 +64,57 @@
   	</section>
   	
   	
-  		<div class="tabs tabs-inline">
-  			<a ng-repeat="tab in tabs" class="tab-item" ng-class="{ active: currentTab.name === tab.name }" ng-click="goToTab({{$index}})">{{tab.name}}</a>
-  		</div>
-  		
-  		<ion-slide-box ng-repeat="tab in tabs" ng-if="currentTab.name === tab.name" on-slide-changed="goToSlide($index, tab)">
-				<ion-slide ng-repeat="slide in tab.slides"><img class="slide" src="{{slide.src}}"></ion-slide>
+		<div class="tabs tabs-inline">
+			<a ng-repeat="tab in tabs" class="tab-item" ng-class="{ active: currentTab.name === tab.name }" ng-click="goToTab({{$index}})">{{tab.name}}</a>
+		</div>
+		
+		<div class="row stripped">
+			<div class="col stripped"></div>
+			<div class="col-67 stripped">
+				<ion-slide-box ng-repeat="tab in tabs" ng-if="currentTab.name === tab.name" class="stripped" on-slide-changed="goToSlide($index, tab)" show-pager="false" does-continue="true">
+					<ion-slide ng-repeat="slide in tab.slides"><img class="slide" src="{{slide.src}}"></ion-slide>
+				</ion-slide-box>
+			</div>
+			<div class="col stripped"></div>
+		</div>
+		
+		<section></section>
+		
+		<div class="item dull">
+			<h2>春の新作</h2>
+			<p>冬の着こなしに、春らしいカラーをプラス</p>
+		</div>
+		
+		<!--
+		<div class="row stripped">
+			<div class="col stripped slider-side">
+				<img src="img/home/spring/1.jpg">
+			</div>
+			<div class="col-67 stripped">
+				<ion-slide-box class="slider-narrow" on-slide-changed="goToSpringSlide($index)" show-pager="false" does-continue="true">
+					<ion-slide ng-repeat="slide in springSlides"><img class="slide" src="{{slide.src}}"></ion-slide>
+				</ion-slide-box>
+			</div>
+			<div class="col stripped">
+				<img src="img/home/spring/1.jpg">
+			</div>
+		</div>
+		-->
+		
+		<div style="position:relative;">
+			<ion-slide-box class="stripped" on-slide-changed="goToSpringSlide($index)" show-pager="false" does-continue="true">
+				<ion-slide ng-repeat="slide in springSlides" class="cl">
+					<div class="row stripped cl">
+						<div class="col stripped cl"><img class="slide-left" style="width:{{slideWidth}}px;left:{{offset}}px;" src="{{slide.prev}}"></div>
+						<div class="col-67 stripped current-slide"><img class="slide" src="{{slide.src}}"></div>
+						<div class="col stripped cl"><img style="width:{{slideWidth}}px;" src="{{slide.next}}"></div>
+					</div>
+				</ion-slide>
 			</ion-slide-box>
+			<a class="slide-button"><i class="icon ion-chevron-left"></i></a>
+			<a class="slide-button right"><i class="icon ion-chevron-right"></i></a>
+		</div>
+		<section></section>
   	
   	<div ng-include="'templates/menu.html'"></div>
   </ion-content>

@@ -47,6 +47,19 @@ angular.module('starter.controllers', [])
 	}
 	$scope.goToTab(0);
 	
+	$scope.springSlides = [];
+	for (var i = 1; i <= 8; i++) { $scope.springSlides.push({ name: i+'.jpg' }); }
+	$scope.goToSpringSlide = function(index) {
+		$scope.springSlides[index].src = $scope.springSlides[index].src || 'img/home/spring/'+$scope.springSlides[index].name;
+		$scope.springSlides[index].prev = $scope.springSlides[index].prev || 'img/home/spring/'+$scope.springSlides[(index == 0) ? $scope.springSlides.length-1 : index-1].name;
+		$scope.springSlides[index].next = $scope.springSlides[index].next || 'img/home/spring/'+$scope.springSlides[(index == $scope.springSlides.length-1) ? 0 : index+1].name;
+		console.log($scope.springSlides[index]);
+	}
+	$scope.goToSpringSlide(0);
+	
+	$scope.slideWidth = Math.floor(window.innerWidth*0.6667);
+	$scope.offset = Math.floor(-$scope.slideWidth+(window.innerWidth*(0.33334/2)));
+	console.log($scope.offset);
 })
 
 .controller('categories', function($scope, $stateParams, $http) {
