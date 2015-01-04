@@ -43,7 +43,9 @@ angular.module('starter.controllers', [])
 		$scope.goToSlide(0, $scope.currentTab);
 	}
 	$scope.goToSlide = function(index, tab) {
-		tab.slides[index].src = 'img/home/tabs/'+tab.name+'/'+tab.slides[index].name;
+		tab.slides[index].src = tab.slides[index].src || 'img/home/tabs/'+tab.name+'/'+tab.slides[index].name;
+		tab.slides[index].prev = tab.slides[index].prev || 'img/home/tabs/'+tab.name+'/'+tab.slides[(index == 0) ? tab.slides.length-1 : index-1].name;
+		tab.slides[index].next = tab.slides[index].next || 'img/home/tabs/'+tab.name+'/'+tab.slides[(index == tab.slides.length-1) ? 0 : index+1].name;
 	}
 	$scope.goToTab(0);
 	
@@ -53,7 +55,6 @@ angular.module('starter.controllers', [])
 		$scope.springSlides[index].src = $scope.springSlides[index].src || 'img/home/spring/'+$scope.springSlides[index].name;
 		$scope.springSlides[index].prev = $scope.springSlides[index].prev || 'img/home/spring/'+$scope.springSlides[(index == 0) ? $scope.springSlides.length-1 : index-1].name;
 		$scope.springSlides[index].next = $scope.springSlides[index].next || 'img/home/spring/'+$scope.springSlides[(index == $scope.springSlides.length-1) ? 0 : index+1].name;
-		console.log($scope.springSlides[index]);
 	}
 	$scope.goToSpringSlide(0);
 	

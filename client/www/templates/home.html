@@ -68,15 +68,15 @@
 			<a ng-repeat="tab in tabs" class="tab-item" ng-class="{ active: currentTab.name === tab.name }" ng-click="goToTab({{$index}})">{{tab.name}}</a>
 		</div>
 		
-		<div class="row stripped">
-			<div class="col stripped"></div>
-			<div class="col-67 stripped">
-				<ion-slide-box ng-repeat="tab in tabs" ng-if="currentTab.name === tab.name" class="stripped" on-slide-changed="goToSlide($index, tab)" show-pager="false" does-continue="true">
-					<ion-slide ng-repeat="slide in tab.slides"><img class="slide" src="{{slide.src}}"></ion-slide>
-				</ion-slide-box>
-			</div>
-			<div class="col stripped"></div>
-		</div>
+		<ion-slide-box ng-repeat="tab in tabs" ng-if="currentTab.name === tab.name" class="stripped" on-slide-changed="goToSlide($index, tab)" show-pager="false" does-continue="true">
+			<ion-slide ng-repeat="slide in tab.slides" class="cl">
+				<div class="row stripped cl">
+					<div class="col stripped cl"><img class="slide-left" style="width:{{slideWidth}}px;left:{{offset}}px;" src="{{slide.prev}}"></div>
+					<div class="col-67 stripped current-slide"><img class="slide" src="{{slide.src}}"></div>
+					<div class="col stripped cl"><img style="width:{{slideWidth}}px;" src="{{slide.next}}"></div>
+				</div>
+			</ion-slide>
+		</ion-slide-box>
 		
 		<section></section>
 		
