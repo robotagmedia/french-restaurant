@@ -31,7 +31,7 @@ angular.module('starter.controllers', [])
  	
 })
 
-.controller('home', function($scope) {
+.controller('home', function($scope, $ionicSlideBoxDelegate) {
 	
 	$scope.tabs = [
 		{ name: 'women', slides: [{ name: '1.jpg' }, { name: '2.jpg' }, { name: '3.jpg' }, { name: '4.jpg' }]},
@@ -60,14 +60,16 @@ angular.module('starter.controllers', [])
 	
 	$scope.slideWidth = Math.floor(window.innerWidth*0.6667);
 	$scope.offset = Math.floor(-$scope.slideWidth+(window.innerWidth*(0.33334/2)));
-	console.log($scope.offset);
+
+	$scope.next = $ionicSlideBoxDelegate.$getByHandle('springSlider').next;
+	$scope.prev = $ionicSlideBoxDelegate.$getByHandle('springSlider').previous;
+	
 })
 
 .controller('categories', function($scope, $stateParams, $http) {
 	
 	$http.get('http://localhost:3001/categories/'+$stateParams.categoryName).success(function(results) {
 		$scope.category = results;
-		console.log(results);
 	});
 	
 })

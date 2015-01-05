@@ -51,35 +51,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     	controller: 'items'
     })
     
-     /*
-    .state('app', {
-      //url: "/fr",
-      abstract: true,
-      templateUrl: "templates/nav.html",
-      controller: 'AppCtrl'
-    })
-    */
-		/*
-    .state('app.home', {
-      url: "/",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/home.html"
-        }
-      }
-    })
-    */
-    /*
-    .state('app.l4', {
-    	url: '/items/:itemId',
-    	views: {
-    		'menuContent': {
-    			templateUrl: 'templates/items.html',
-    			controller: 'items'
-    		}
-    	}
-    })
-    */
-  //$urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/');
+  
 });
 
