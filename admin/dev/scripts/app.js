@@ -15,7 +15,8 @@ app.config(function($routeProvider, $locationProvider) {
 
 //api service wrapper example
 app.factory('$api', ['$http', function($http) {
-	var _apiUrl = 'http://localhost:3001';
+	//var _apiUrl = 'http://localhost:3001';
+	var _apiUrl = 'http://'+window.location.hostname+':3001';
 	return {
 		get: function(url) {
 			return $http.get(_apiUrl+url);
