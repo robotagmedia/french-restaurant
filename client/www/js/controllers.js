@@ -2,6 +2,8 @@ angular.module('starter.controllers', [])
 
 .controller('header', function($scope, $state) {
  	
+ 	console.log(window.location);
+ 	
  	$scope.toggled = false;
  	$scope.state;
  	$scope.params;
@@ -68,7 +70,7 @@ angular.module('starter.controllers', [])
 
 .controller('categories', function($scope, $stateParams, $http) {
 	
-	$http.get('http://localhost:3001/categories/'+$stateParams.categoryName).success(function(results) {
+	$http.get('http://'+window.location.hostname+':3001/categories/'+$stateParams.categoryName).success(function(results) {
 		$scope.category = results;
 	});
 	
@@ -77,7 +79,7 @@ angular.module('starter.controllers', [])
 .controller('collections', function($scope, $stateParams, $http) {
 	
 	$scope.store = $stateParams.categoryName;
-	$http.get('http://localhost:3001/collections/'+$stateParams.collectionId).success(function(results) {
+	$http.get('http://'+window.location.hostname+':3001/collections/'+$stateParams.collectionId).success(function(results) {
 		console.log(results);
 		$scope.collection = results;
 	});
@@ -86,7 +88,7 @@ angular.module('starter.controllers', [])
 
 .controller('items', function($scope, $stateParams, $http) {
 	$scope.store = $stateParams.categoryName;
-	$http.get('http://localhost:3001/items/'+$stateParams.itemId).success(function(results) {
+	$http.get('http://'+window.location.hostname+':3001/items/'+$stateParams.itemId).success(function(results) {
 		$scope.item = results;
 	});
 });
